@@ -1,0 +1,14 @@
+T__0=1
+T__1=2
+T__2=3
+T__3=4
+STRING=5
+IDENTIFIER=6
+NUMBERS=7
+LETTERS=8
+NL=9
+WHITESPACE=10
+'Start'=1
+'{'=2
+'}'=3
+'print'=4
