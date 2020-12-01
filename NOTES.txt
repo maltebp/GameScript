@@ -1,0 +1,45 @@
+Language Design Notes
+
+
+
+// Collider definitions:
+    colliders {
+
+        PLAYER,
+        ENEMEY
+    }
+
+   colliderfunctions {
+
+
+
+
+   }
+
+
+Entity template example:
+
+    template Player {
+        Transform:
+            position = 100, 20
+        Sprite:
+            texture = "assets/player.png"
+            size = 10
+        Collider:
+            width = 10
+            height = 10
+    }
+
+
+
+
+start {
+
+    player = create Player
+
+
+    collision(Player p, Enemy e ) {
+
+    }
+
+}

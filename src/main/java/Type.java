@@ -1,4 +1,4 @@
-public enum Types {
+public enum Type {
     NUMBER,
     TEXT,
     BOOLEAN

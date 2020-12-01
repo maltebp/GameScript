@@ -1,9 +1,13 @@
+
 public abstract class Attribute {
 
     protected String name;
-    protected Types type;
+    protected Type type;
 
-    public Attribute(String name, Types type) {
+
+
+
+    public Attribute(String name, Type type) {
         this.name = name;
         this.type = type;
     }
@@ -12,7 +16,8 @@ public abstract class Attribute {
         return name;
     }
 
-    public Types getType() {
+    public Type getType() {
         return type;
     }
+
 }

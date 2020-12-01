@@ -3,7 +3,7 @@ public class NumberAttribute extends Attribute {
     private double value;
 
     public NumberAttribute(String name) {
-        super(name, Types.NUMBER);
+        super(name, type.NUMBER);
     }
 
 

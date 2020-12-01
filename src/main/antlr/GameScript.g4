@@ -4,7 +4,6 @@ program
     :   block? ((NL block)|NL)* EOF
     ;
 
-
 block
     :   start   # StartBlock
     |   objectDefinition # ObjectBlock
@@ -17,7 +16,7 @@ start
 
 
 objectDefinition
-    : 'Object' IDENTIFIER ':' (component|NL)*
+    : IDENTIFIER '{' (component|NL)* '}'
     ;
 
 component
@@ -39,11 +38,27 @@ command
     ;
 
 
+variableAssignment
+    : IDENTIFIER '=' expression
+    ;
 
+expression
+    :   IDENTIFIER
+    |   value
+    ;
+
+value
+    : '(' NUMBER ',' NUMBER ')'
+    | '(' NUMBER ',' NUMBER ',' NUMBER ')'
+    | '(' NUMBER ',' NUMBER ',' NUMBER ',' NUMBER ')'
+    | STRING
+    | NUMBER
+    ;
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-STRING : '"' ~[\n\t\r"]* '"' ;
+NUMBER  :  ([0-9] | ([1-9][0-9]*)) ('.' [0-9]* [1-9])* ;
+STRING  : '"' ~[\n\t\r"]* '"' ;
 
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
